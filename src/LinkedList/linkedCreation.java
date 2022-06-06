@@ -23,18 +23,20 @@ public class linkedCreation {
         return head;
 
     }
-    public static Node<Integer> appendLastNToFirst(Node<Integer> head, int n) {
-        //Your code goes here
-       Node<Integer> temp = head;
-
+    public static void print(Node<Integer> head){
+        if(head==null){
+            return;
+        }
+        System.out.print(head.data+" ");
+        print(head.next);
 
     }
     public static void main(String[] args) {
         Node<Integer> head = createLinked();
-        listUse.print(head);
-        Scanner sc = new Scanner(System.in);
-        int n= sc.nextInt();
-        appendLastNToFirst(head,n);
-        listUse.print(head);
+        print(head);
+        //Scanner sc = new Scanner(System.in);
+        //int n= sc.nextInt();
+        //appendLastNToFirst(head,n);
+        //listUse.print(head);
     }
 }
